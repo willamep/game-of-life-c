@@ -19,13 +19,15 @@ int is_alive(char map[][WIDTH], int y, int x) {
         alive = 1;
         sum--;
     }
+    int r;
     if (!(alive) && sum == 3) {
-        return 1;
+        r = 1;
     } else if ((alive) && sum > 1 && sum < 4) {
-        return 1;
+        r = 1;
     } else {
-        return 0;
+        r = 0;
     }
+    return r;
 }
 
 int sum_neighbours(char map[][WIDTH], int y, int x) {
